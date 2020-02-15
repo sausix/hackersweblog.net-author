@@ -6,4 +6,5 @@ Social:
   https://github.com/sausix: github
   https://twitter.com/sausix: twitter
 Avatar: avatar.jpg
+Lang: de, en
 ---
