@@ -35,6 +35,7 @@ Webserver Verzeichnis: `/srv/http/hackersweblog.net/public`
 
 public/  
 * `static/` wirklich static, Templates usw.  
+  * `templates/` templates
 * `content/` dynamisch generiert durch backend  
 
 Links SEO:
