@@ -8,6 +8,7 @@ Tags: demo, markdown
 Source: http://where-i-stole-my-content.com/article.html
 Linkto: some-category/other-content-pointed-to
 Linkwith: some-category/other-content-linked-vice-versa
+Template: hackersweblog.net
 ---
 
 # Infos zur Struktur des Projektes hackersweblog.net
@@ -27,23 +28,34 @@ Linkwith: some-category/other-content-linked-vice-versa
 `Source: http://where-i-stole-my-content.com/article2.html`  
 `Linkto: some-category/other-content-pointed-to` Meta-Verlinkung auf einen Artikel  
 `Linkwith: some-category/other-content-linked-vice-versa` Verkettung dieses Artikels mit dem anderen  
+`Template: hackersweblog.net` Optional wenn anderes Template gewünscht.  
+`Model: index.html` Optional wenn bestimmtes Modell (HTML-Datei) gewünscht.  
 `---`
 
 
 ## URLs
 Webserver Verzeichnis: `/srv/http/hackersweblog.net/public`  
 
-public/  
-* `static/` wirklich static, Templates usw.  
-  * `templates/` templates
-* `content/` dynamisch generiert durch backend  
+## Autoren
+* `/author/meta.md` Infos zum Autor
+* `/author/{lang}.md` Text zum Autor in bestimmter Sprache
+* `/author/*` Bilder und Dateien referenziert in {lang}.md
 
-Links SEO:
-* `http://hackersweblog.net/content/demo/demofile/de`  -> `repo://content/demo/demofile.de.md`  
-* `http://hackersweblog.net/content/demo/demofile/en` -> `repo://content/demo/demofile.en.md`  
-* `http://hackersweblog.net/content/demo/demofile` -> `repo://content/demo/demofile.`default oder first`.md`  
+## Content
+* `content/*` dynamisch generiert durch backend aus jeweils allen `content/*`
+* `content/static/` statische Dateien, Bilder, Downloads `content/static/*`
+
+## Templates
+* `/*.html` Lauffähige Html-Seiten mit Jinja-Tags: https://palletsprojects.com/p/jinja/
+
+## Links SEO:
+* `http://hackersweblog.net/demo/demofile/de`  -> `repo://content/demo/demofile.de.md`  
+* `http://hackersweblog.net/demo/demofile/en` -> `repo://content/demo/demofile.en.md`  
+* `http://hackersweblog.net/demo/demofile` -> `repo://content/demo/demofile.`default oder first`.md`  
 
 
 ## Generelle Stichpunkte
-* Feste Liste von Git-Adressen, die auf Repos mit zwei Unterordnern zeigen. Siehe diese Repo.
-* Regelmäßig git clone (ist das ok so? Wenig traffic wenn keine Changes? Gibt es bessere git-Options? Kein Blocking auf github oder so?
+* Author-Repos in fester Listen von Git-Adressen, die auf Repos mit zwei Unterordnern zeigen. Siehe diese Repo.
+* Template-Repo
+* Ein TEMPLATE ist ein "Style". Nur einmal pro Repo, direkt im root. Unterordner für CSS, Bilder optional.
+* Ein MODEL ist eine von mehreren HTML-Dateien (index.html, taglist.html) eines Templates.
