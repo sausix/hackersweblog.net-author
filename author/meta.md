@@ -1,11 +1,11 @@
 ---
-Nickname: sausix
-Fullname: Adrian Sausenthaler
-Birth: 1984-03-19
-Social:
+nickname: sausix
+fullname: Adrian Sausenthaler
+birth: 1984-03-19
+social:
   https://github.com/sausix: github
   https://twitter.com/sausix: twitter
-Avatar: avatar.jpg
-Lang: de, en
-ContentGrant: hackersweblog.net
+avatar: avatar.jpg
+lang: de, en
+contentgrant: hackersweblog.net
 ---
