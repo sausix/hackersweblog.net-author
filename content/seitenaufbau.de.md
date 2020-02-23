@@ -11,6 +11,7 @@ source: http://where-i-stole-my-content.com/article.html
 ## Header von Content-Dateien
 * Alle Keys in Headern klein
 * Jeder Key einmalig. Evtl. überschreiben spätere Keys den vorherigen.
+* Ländercodes immer nach `ISO 639-1:2002` (2 Buchstaben, kleingeschrieben)
 
 `---`  
 `title: Generelle Infos` Titel möglichst knapp, evtl. Abbildung in URL  
@@ -32,15 +33,15 @@ source: http://where-i-stole-my-content.com/article.html
 
 ## Header von author/meta.md
 `---`  
-Nickname: sausix  
-Fullname: Adrian Sausenthaler  
-Birth: 1984-03-19  
-Social:  
+nickname: sausix  
+fullname: Adrian Sausenthaler  
+birth: 1984-03-19  
+social:  
   https://github.com/sausix: github  
   https://twitter.com/sausix: twitter  
-Avatar: avatar.jpg  
-Lang: de, en  
-ContentGrant: hackersweblog.net  
+avatar: avatar.jpg  
+lang: de, en  
+contentgrant: hackersweblog.net  
 ~~`contents:`~~ Verboten. Wird generiert.  
 `---`
 
