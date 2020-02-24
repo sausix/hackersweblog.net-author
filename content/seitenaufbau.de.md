@@ -27,8 +27,10 @@ source: http://where-i-stole-my-content.com/article.html
 `template: hackersweblog.net` Optional wenn bestimmtes Template gewünscht.  
 `model: index.html` Optional wenn bestimmtes Modell (HTML-Datei) gewünscht. Vermeiden zwecks Kompatibilität.  
 `image: post.jpg` Optionales Bild zum Artikel (für Thumbnail etc.)  
-~~`url:`~~ Verboten. Wird generiert.  
-~~`author:`~~ Verboten. Wird generiert.  
+~~`url:`~~ Verboten. Wird generiert. Url zum Artikel.  
+~~`author:`~~ Verboten. Wird generiert. Autor-Meta.  
+~~`lang:`~~ Verboten. Wird generiert. Sprache des Artikels.  
+~~`langs:`~~ Verboten. Wird generiert.  Liste aller verfügbaren Sprachen des Artikels.  
 `---`
 
 ## Header von author/meta.md
@@ -68,21 +70,14 @@ Zugehörige Scripte, Bilder, CSS direkt im root. Ist besser, da es weniger Konfl
 Immer relativ zum Repo-Root halten. Externe Fonts etc. natürlich absolut.
 
 ## URL-Mappings SEO:
-`"ISOLATED": False` (default und am nicesten):
 * `http://hackersweblog.net/demo/demofile/de`  -> `repo://content/demo/demofile.de.md`
 * `http://hackersweblog.net/demo/demofile/en` -> `repo://content/demo/demofile.en.md`
-* `http://hackersweblog.net/demo/demofile` -> `repo://content/demo/demofile.`default oder first`.md`
+* `http://hackersweblog.net/demo/demofile` -> `repo://content/demo/demofile.md` oder:
+* `http://hackersweblog.net/demo/demofile` -> `repo://content/demo/demofile.`**pagedefault**`.md` oder:
+* `http://hackersweblog.net/demo/demofile` -> `repo://content/demo/demofile.`**first**`.md` oder:
 * `http://hackersweblog.net/deatplayer/de` -> `repo://author/de.md`
-* `http://hackersweblog.net/linux`  -> (generiert)
-* `http://hackersweblog.net/bla.css`  -> `repo://bla.css`
-
-`"ISOLATED": True` (Konflikte unwahrscheinlicher):
-* `http://hackersweblog.net/author/sausix/en` -> `repo://author/en.md`
-* `http://hackersweblog.net/author/deatplayer/de` -> `repo://author/de.md`
-* `http://hackersweblog.net/content/demo/demofile/de` -> `repo://content/demo/demofile.de.md`
-* `http://hackersweblog.net/tag/linux` -> (generiert)
-* `http://hackersweblog.net/bla.css` -> `repo://bla.css` Ausnahmsweise immer relativ zu root weil sonst Templates nicht mehr eigenständig laufen wenn zugehörige Dateien je nach "ISOLATED" an verschiedenen Orten zu finden wären.
-
+* `http://hackersweblog.net/linux`  -> (taglist, generiert)
+* `http://hackersweblog.net/bla.css`  -> `templaterepo://bla.css`
 
 ## Generelle Stichpunkte
 * Ein TEMPLATE ist ein globaler "Style". Nur einmal pro Repo, direkt im root. Unterordner für CSS, Bilder optional.
