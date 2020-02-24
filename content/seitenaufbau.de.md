@@ -42,8 +42,8 @@ social:
   https://github.com/sausix: github  
   https://twitter.com/sausix: twitter  
 avatar: avatar.jpg  
-lang: de, en  
 contentgrant: hackersweblog.net  
+~~`langs`:~~ Verboten, Wird aus gefundenem Content generiert.  
 ~~`contents:`~~ Verboten. Wird generiert.  
 `---`
 
