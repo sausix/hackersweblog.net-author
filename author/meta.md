@@ -6,8 +6,8 @@ social:
   https://github.com/sausix: github
   https://twitter.com/sausix: twitter
 avatar: avatar.jpg
-lang: de, en
 contentgrant: hackersweblog.net
+lang: en
 ---
 *Hey :-)*  
 My name is Adrian and according to my papers I am just an electrician.  
