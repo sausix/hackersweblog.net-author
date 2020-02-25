@@ -32,6 +32,7 @@ source: http://where-i-stole-my-content.com/article.html
 ~~`lang:`~~ Verboten. Wird generiert. Sprache des Artikels.  
 ~~`langs:`~~ Verboten. Wird generiert. Liste aller verfügbaren Sprachen des Artikels.  
 ~~`gitsource:`~~ Verboten. Wird generiert. Url zum git repo.  
+~~`mdsource:`~~ Verboten. Wird generiert. Pfad zu Quelldatei (md).  
 `---`
 
 ## Header von author/meta.md
