@@ -52,9 +52,9 @@ Webserver Verzeichnis, ziel der Dateigenerierung: `/srv/http/hackersweblog.net/p
 
 ## Autoren-Repo
 * `/author/meta.md` Infos zum Autor
-* `/author/{lang}.md` Text zum Autor in bestimmter Sprache. Idealerweise für jedes author.lang
+* `/author/`**lang**`}.md` Text zum Autor in bestimmter Sprache. Idealerweise für jedes author.lang
 * `/author/*` Bilder und Dateien referenziert in {lang}.md
-* `/content/*` Daraus wird der Content des Autors generiert. Unterordner ok. Ordnerstruktur möglichst mit Tags gleich halten, zumindest den Hauptordner -> content/linux/terminal/tricks.de.md
+* `/content/*/*.`**lang**`.md` Daraus wird der Content des Autors generiert. Unterordner ok. Ordnerstruktur möglichst mit Tags gleich halten, zumindest den Hauptordner -> content/linux/terminal/tricks.de.md. Sprachcode ist Pflicht!
 
 ## Template-Repo
 Lauffähige Html-Seiten als "MODEL" mit Jinja-Tags: https://palletsprojects.com/p/jinja/  
@@ -71,13 +71,12 @@ Immer relativ zum Repo-Root halten. Externe Fonts etc. natürlich absolut.
 
 ## URL-Mappings SEO:
 * `http://hackersweblog.net/demo/demofile/de`  -> `repo://content/demo/demofile.de.md`
-* `http://hackersweblog.net/demo/demofile/en` -> `repo://content/demo/demofile.en.md`
-* `http://hackersweblog.net/demo/demofile` -> `repo://content/demo/demofile.md` oder:
+* `http://hackersweblog.net/endemo/demofile/en` -> `repo://content/demo/demofile.en.md`
 * `http://hackersweblog.net/demo/demofile` -> `repo://content/demo/demofile.`**pagedefault**`.md` oder:
 * `http://hackersweblog.net/demo/demofile` -> `repo://content/demo/demofile.`**first**`.md` oder:
 * `http://hackersweblog.net/deatplayer/de` -> `repo://author/de.md`
-* `http://hackersweblog.net/linux`  -> (taglist, generiert)
-* `http://hackersweblog.net/bla.css`  -> `templaterepo://bla.css`
+* `http://hackersweblog.net/linux` -> (taglist, generiert)
+* `http://hackersweblog.net/bla.css` -> `templaterepo://bla.css`
 
 ## Generelle Stichpunkte
 * Ein TEMPLATE ist ein globaler "Style". Nur einmal pro Repo, direkt im root. Unterordner für CSS, Bilder optional.
