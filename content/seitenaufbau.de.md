@@ -30,7 +30,8 @@ source: http://where-i-stole-my-content.com/article.html
 ~~`url:`~~ Verboten. Wird generiert. Url zum Artikel.  
 ~~`author:`~~ Verboten. Wird generiert. Autor-Meta.  
 ~~`lang:`~~ Verboten. Wird generiert. Sprache des Artikels.  
-~~`langs:`~~ Verboten. Wird generiert.  Liste aller verfügbaren Sprachen des Artikels.  
+~~`langs:`~~ Verboten. Wird generiert. Liste aller verfügbaren Sprachen des Artikels.  
+~~`gitsource:`~~ Verboten. Wird generiert. Url zum git repo.  
 `---`
 
 ## Header von author/meta.md
@@ -45,6 +46,7 @@ avatar: avatar.jpg
 contentgrant: hackersweblog.net  
 ~~`langs`:~~ Verboten, Wird aus gefundenem Content generiert.  
 ~~`contents:`~~ Verboten. Wird generiert.  
+~~`gitsources:`~~ Verboten. Wird generiert. Liste von Urls zu git repos.  
 `---`
 
 ## Root
