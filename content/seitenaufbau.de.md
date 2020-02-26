@@ -44,7 +44,7 @@ social:
   https://github.com/sausix: github  
   https://twitter.com/sausix: twitter  
 avatar: avatar.jpg  
-contentgrant: hackersweblog.net  
+contentgrant: `hackersweblog.net`  oder `"*"` oder eine Liste `["page1.net", "page2.net"]`  
 ~~`langs`:~~ Verboten, Wird aus gefundenem Content generiert.  
 ~~`contents:`~~ Verboten. Wird generiert.  
 ~~`gitsources:`~~ Verboten. Wird generiert. Liste von Urls zu git repos.  
