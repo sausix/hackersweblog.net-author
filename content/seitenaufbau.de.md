@@ -37,7 +37,7 @@ source: http://where-i-stole-my-content.com/article.html
 
 ## Header von author/meta.md
 `---`  
-nickname: sausix  
+´nickname: sausix´ Eindeutiger Name unter dem alle Repos als der selbe Autor gruppiert werden.  
 fullname: Adrian Sausenthaler  
 birth: 1984-03-19  
 social:  
@@ -86,18 +86,31 @@ Immer relativ zum Repo-Root halten. Externe Fonts etc. natürlich absolut.
 * Ein MODEL ist eine von mehreren HTML-Dateien (index.html, tag.html, author.html) eines Templates.
 * Ein CONTENT sind die Artikel bzw. eigentlichen Inhalte.
 
-## Tags für Templates
-* now.year _usw._
-* author."metakey"
-* author (Eigenbeschreibung)
-* content."metakey"
-* content (Der Content selber)
+## Datentypen und Strukturen
+Datentypen sind per Jinja in bestimmten Template-Models verfügbar.
 
-## Listen
-Listen direkt angesprochen geben die Anzahl dahinter zurück.
+### Datentyp "generationtime"
+Beinhaltet die Datums und Zeitinformationen, wann die Contents generiert wurden.
 
-### Listen mit inhalt "tag"
-* content.tags
+Vorhanden in:
+* generationtime (Global)
+
+Properties:
+* day (01..31)
+* month (01..12)
+* year (2020)
+* hour (14)
+* minute (59)
+* second (59)
+
+Predefined by formats in Config.DATETIME_FORMATS or PageConfig.DATETIME_FORMATS:
+* date
+* time
+* datetime
+
+### Datentyp "tag"
+Vorhanden in:
+* content.tags (Liste aller Tags des Contents)
 * tags (alle Tags, sortiert nach häufigkeit)
 * content.author.tags (alle Tags des authors, sortiert nach häufigkeit)
 * tag (gültig nur auf der Index-Seite eines Tags)
@@ -109,17 +122,41 @@ Listen direkt angesprochen geben die Anzahl dahinter zurück.
 * tag.contents (liste aller contents mit diesem tag)
 
 
-### Listen mit inhalt "content"
-* contents (alle contents, zeitlich sortiert)
-* author.contents (contents eines autors, zeitlich sortiert)
+### Datentyp "content"
+Vorhanden in:
+* content (Aktueller Content)
+* contents (Liste aller Contents, zeitlich sortiert)
+* author.contents (Liste aller Contents eines Autors, zeitlich sortiert)
 
-"content" hat properties:
-* content."metakey"
+Properties:
+* content."metakey" (Tags aus YAML-Header)
+* content.url (Link auf den Content)
+* content.author (Autor-Meta)
+* lang (contentlang-Struktur)
+* langs (Liste aller Sprachversionen des Contents)
 
+### Datentyp "author"
+Vorhanden in:
+* authors (Liste aller Autoren)
+* content.author (Autot-Meta zum Content)
 
-### Listen mit inhalt "author"
-* authors (alle Autoren)
-
-jeweils:
+Properties:
 * author."metakey"
-* author.contents
+* author.contents (Liste von Contents des Autors)
+
+### Datentyp "contentlang"
+Vorhanden in:
+* content.langs (Liste aller Sprachen zum Content)
+* content.lang (Sprache zum Content)
+
+Properties:
+* contentlang.langcode (Sprachcode, 2 Buchstaben)
+* contentlang.url (Url zum Content in dieser Sprache)
+
+### Datentyp "authorlang"
+Vorhanden in:
+* author.langs (Liste aller Sprachen der verfassten Contents des Autors)
+
+Properties:
+* authorlang.langcode (Sprachcode, 2 Buchstaben)
+* authorlang.contents (Liste aller Contents des Autors einer bestimmten Sprache)
