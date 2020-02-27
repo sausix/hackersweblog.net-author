@@ -1,13 +1,13 @@
 ---
-Title: Demo-Inhalt
-Date: 2020-02-15
-Publish: Yes
-Publish-after: 2020-02-15 12:00
-Description: Diese Seite beinhaltet ein paar Markdown-Elemente
-Tags: demo, markdown
-Source: http://where-i-stole-my-content.com/article.html
-Linkto: some-category/other-content-pointed-to
-Linkwith: some-category/other-content-linked-vice-versa
+title: Demo-Inhalt
+date: 2020-02-15
+publish: Yes
+publish-after: 2020-02-15 12:00
+description: Diese Seite beinhaltet ein paar Markdown-Elemente
+tags: demo, markdown
+source: http://where-i-stole-my-content.com/article.html
+linkto: some-category/other-content-pointed-to
+linkwith: some-category/other-content-linked-vice-versa
 ---
 
 # Dies ist eine **deutsche** Demo-Datei geschrieben in Markdown.
