@@ -14,12 +14,11 @@ source: http://where-i-stole-my-content.com/article.html
 * Ländercodes immer nach `ISO 639-1:2002` (2 Buchstaben, kleingeschrieben)
 
 `---`  
-`title: Generelle Infos` Titel möglichst knapp, evtl. Abbildung in URL  
-`date: 2019-02-15` Hauptdatum (erstellt)  
+`title: Generelle Infos` Titel möglichst knapp, evtl. Abbildung in URL (Pflichtangabe)  
+`date: 2019-02-15` Hauptdatum (erstellt) (Pflichtangabe)  
 `revision: 2020-01-31` Datum der letzten Überarbeitung (oder aus git repo meta)  
-`publish: Hidden` Standard `Yes`. `No` ignoriert das Dokument, `Hidden` zeigt es *nirgends* an  
-`publish-after: 2020-02-15 12:00` Optional, wenn Publish nicht `No`, überschreibst mit `Publish: Hidden` bzw. `Publish: Yes` je nach Datum. cron-python-html/update.py muss erneut ausgeführt werden!  
-`description: Diese Seite beinhaltet ein paar Markdown-Elemente` Etwas längere Beschreibung, Einzeiler.  
+`publish: Hidden` Standard `Yes`. `No` ignoriert das Dokument, `Hidden` zeigt es *nirgends* an. ISO-Datum (oder mit Uhrzeit) gibt den Zeitpunkt der Publizierung an. update.py muss erneut ausgeführt werden!  
+`description: Diese Seite beinhaltet ein paar Markdown-Elemente` Etwas längere Beschreibung, Einzeiler. (Pflichtangabe)  
 `tags: demo, markdown` Tags, getrennt mit Komma. Namen immer klein. Leerzeichnen-Tags erlaubt(?) -> unschön.  
 `source: http://where-i-stole-my-content.com/article1.html, http://where-i-stole-my-content.com/article2.html` Liste von Quellangaben, kommagetrennt. Das Komma ist kein gültiges Zeichen in URLs.  
 `linkto: some-category/other-content-pointed-to` Meta-Verlinkung auf einen Artikel  
@@ -33,18 +32,19 @@ source: http://where-i-stole-my-content.com/article.html
 ~~`langs:`~~ Verboten. Wird generiert. Liste aller verfügbaren Sprachen des Artikels.  
 ~~`gitsource:`~~ Verboten. Wird generiert. Url zum git repo.  
 ~~`mdsource:`~~ Verboten. Wird generiert. Pfad zu Quelldatei (md).  
+~~`id:`~~ Verboten. Wird generiert. contentid (md).  
 `---`
 
 ## Header von author/meta.md
 `---`  
-´nickname: sausix´ Eindeutiger Name unter dem alle Repos als der selbe Autor gruppiert werden.  
+´nickname: sausix´ Eindeutiger Name unter dem alle Repos als der selbe Autor gruppiert werden. (Pflichtangabe)  
 fullname: Adrian Sausenthaler  
 birth: 1984-03-19  
 social:  
   https://github.com/sausix: github  
   https://twitter.com/sausix: twitter  
 avatar: avatar.jpg  
-contentgrant: `hackersweblog.net`  oder `"*"` oder eine Liste `["page1.net", "page2.net"]`  
+contentgrant: `hackersweblog.net`  oder `"*"` oder eine Liste `["page1.net", "page2.net"]` (Pflichtangabe)  
 ~~`langs`:~~ Verboten, Wird aus gefundenem Content generiert.  
 ~~`contents:`~~ Verboten. Wird generiert.  
 ~~`gitsources:`~~ Verboten. Wird generiert. Liste von Urls zu git repos.  
@@ -74,7 +74,7 @@ Immer relativ zum Repo-Root halten. Externe Fonts etc. natürlich absolut.
 
 ## URL-Mappings SEO:
 * `http://hackersweblog.net/demo/demofile/de`  -> `repo://content/demo/demofile.de.md`
-* `http://hackersweblog.net/endemo/demofile/en` -> `repo://content/demo/demofile.en.md`
+* `http://hackersweblog.net/demo/demofile/en` -> `repo://content/demo/demofile.en.md`
 * `http://hackersweblog.net/demo/demofile` -> `repo://content/demo/demofile.`**pagedefault**`.md` oder:
 * `http://hackersweblog.net/demo/demofile` -> `repo://content/demo/demofile.`**first**`.md` oder:
 * `http://hackersweblog.net/deatplayer/de` -> `repo://author/de.md`
@@ -85,6 +85,7 @@ Immer relativ zum Repo-Root halten. Externe Fonts etc. natürlich absolut.
 * Ein TEMPLATE ist ein globaler "Style". Nur einmal pro Repo, direkt im root. Unterordner für CSS, Bilder optional.
 * Ein MODEL ist eine von mehreren HTML-Dateien (index.html, tag.html, author.html) eines Templates.
 * Ein CONTENT sind die Artikel bzw. eigentlichen Inhalte.
+* Eine CONTENTID ist der minimale relative Pfad unterhalb von repo://content/ ohne lang und ohne md.
 
 ## Datentypen und Strukturen
 Datentypen sind per Jinja in bestimmten Template-Models verfügbar.
