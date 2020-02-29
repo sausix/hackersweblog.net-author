@@ -2,12 +2,9 @@
 title: Demo content
 date: 2020-02-15
 publish: Yes
-publish-after: 2020-02-15 12:00
 description: This page contains some basis Markdown elements
 tags: demo, markdown
 source: http://where-i-stole-my-content.com/article.html
-linkto: some-category/other-content-pointed-to
-linkwith: some-category/other-content-linked-vice-versa
 ---
 
 # This is an **english** demo content file written in Markdown.
