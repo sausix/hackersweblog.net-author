@@ -30,6 +30,7 @@ sources: http://where-i-stole-my-content.com/article.html
 ~~`author:`~~ Verboten. Wird generiert. Autor-Meta.  
 ~~`lang:`~~ Verboten. Wird generiert. Sprache des Artikels.  
 ~~`langs:`~~ Verboten. Wird generiert. Liste aller verfügbaren Sprachen des Artikels.  
+~~`otherlangs:`~~ Verboten. Wird generiert. Liste aller anderen Sprachen des Artikels.  
 ~~`gitsource:`~~ Verboten. Wird generiert. Url zum git repo.  
 ~~`mdsource:`~~ Verboten. Wird generiert. Pfad zu Quelldatei (md).  
 ~~`id:`~~ Verboten. Wird generiert. contentid.  
