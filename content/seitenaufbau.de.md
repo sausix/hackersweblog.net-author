@@ -3,7 +3,7 @@ title: Generelle Infos
 date: 2020-02-15
 description: Diese Seite beinhaltet ein paar Markdown-Elemente
 tags: demo, markdown
-source: http://where-i-stole-my-content.com/article.html
+sources: http://where-i-stole-my-content.com/article.html
 ---
 
 # Infos zur Struktur des Projektes hackersweblog.net als Demo-Content 
@@ -20,7 +20,7 @@ source: http://where-i-stole-my-content.com/article.html
 `publish: Hidden` Standard `Yes`. `No` ignoriert das Dokument, `Hidden` zeigt es *nirgends* an. ISO-Datum (oder mit Uhrzeit) gibt den Zeitpunkt der Publizierung an. update.py muss erneut ausgeführt werden!  
 `description: Diese Seite beinhaltet ein paar Markdown-Elemente` Etwas längere Beschreibung, Einzeiler. (Pflichtangabe)  
 `tags: demo, markdown` Tags, getrennt mit Komma. Namen immer klein. Leerzeichnen-Tags erlaubt(?) -> unschön.  
-`source: http://where-i-stole-my-content.com/article1.html, http://where-i-stole-my-content.com/article2.html` Liste von Quellangaben, kommagetrennt. Das Komma ist kein gültiges Zeichen in URLs.  
+`sources: http://where-i-stole-my-content.com/article1.html, http://where-i-stole-my-content.com/article2.html` Liste von Quellangaben, kommagetrennt. Das Komma ist kein gültiges Zeichen in URLs.  
 `linkto: some-category/other-content-pointed-to` Meta-Verlinkung auf einen Artikel  
 `linkwith: some-category/other-content-linked-vice-versa` Verkettung dieses Artikels mit dem anderen  
 `template: hackersweblog.net` Optional wenn bestimmtes Template gewünscht.  
@@ -32,7 +32,7 @@ source: http://where-i-stole-my-content.com/article.html
 ~~`langs:`~~ Verboten. Wird generiert. Liste aller verfügbaren Sprachen des Artikels.  
 ~~`gitsource:`~~ Verboten. Wird generiert. Url zum git repo.  
 ~~`mdsource:`~~ Verboten. Wird generiert. Pfad zu Quelldatei (md).  
-~~`id:`~~ Verboten. Wird generiert. contentid (md).  
+~~`id:`~~ Verboten. Wird generiert. contentid.  
 `---`
 
 ## Header von author/meta.md
