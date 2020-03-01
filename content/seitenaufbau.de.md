@@ -34,6 +34,7 @@ sources: http://where-i-stole-my-content.com/article.html
 ~~`gitsource:`~~ Verboten. Wird generiert. Url zum git repo.  
 ~~`mdsource:`~~ Verboten. Wird generiert. Pfad zu Quelldatei (md).  
 ~~`id:`~~ Verboten. Wird generiert. contentid.  
+~~`files:`~~ Verboten. Wird generiert. Alle gefundenen Dateien im selben Ordner ausgenommen contents und Sprachvarianten.  
 `---`
 
 ## Header von author/meta.md
